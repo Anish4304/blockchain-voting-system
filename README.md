@@ -199,6 +199,10 @@ View all blocks and verify integrity
 
 This project is licensed under the MIT License.
 
+## ⚠️ Note
+
+Some files contain emoji characters (👨👩🗳️) which may display differently depending on your editor's encoding. The code will compile and run correctly regardless of how they display.
+
 ## 🙏 Acknowledgments
 
 - MongoDB for database
