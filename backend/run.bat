@@ -1,0 +1,6 @@
+@echo off
+echo Compiling with MongoDB driver...
+javac -cp ".;mongodb-driver-sync-4.11.1.jar;mongodb-driver-core-4.11.1.jar;bson-4.11.1.jar" src\main\java\*.java -d .
+echo.
+echo Starting server with MongoDB...
+java -cp ".;mongodb-driver-sync-4.11.1.jar;mongodb-driver-core-4.11.1.jar;bson-4.11.1.jar" VotingServer

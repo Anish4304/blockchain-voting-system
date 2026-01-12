@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockVote - Blockchain Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand" onclick="showPage('landing')">
+                <div class="logo">V</div>
+                <span class="brand-text">BlockVote</span>
+            </div>
+            <div class="nav-links">
+                <button onclick="showPage('landing')">Home</button>
+                <button onclick="showPage('dashboard')">Dashboard</button>
+                <button onclick="showPage('candidates')">Candidates</button>
+                <button onclick="showPage('results')">Results</button>
+                <button onclick="showPage('admin')">Admin</button>
+                <button id="logoutBtn" class="btn-secondary" onclick="logout()" style="display:none;">Logout</button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <section id="landing" class="page active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-icon">🛡️</div>
+                <h1 class="hero-title">Secure, Transparent &<br>Decentralized Voting System</h1>
+                <p class="hero-subtitle">Powered by Blockchain Technology for Tamper-Proof Elections</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="showPage('dashboard')">Go to Dashboard →</button>
+                    <button class="btn-secondary" onclick="showPage('candidates')">View Candidates →</button>
+                </div>
+                <div class="features">
+                    <div class="feature">✓ Immutable blockchain records</div>
+                    <div class="feature">✓ Complete transparency</div>
+                    <div class="feature">✓ Anonymous voting</div>
+                    <div class="feature">✓ Real-time results</div>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">👥</div>
+                    <div class="stat-value">12,458</div>
+                    <div class="stat-label">Total Voters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">🗳️</div>
+                    <div class="stat-value">8,234</div>
+                    <div class="stat-label">Votes Cast</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon amber">📈</div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Active Elections</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Page -->
+    <section id="dashboard" class="page">
+        <div class="container">
+            <h1 class="page-title">Voter Dashboard</h1>
+            <div class="dashboard-grid">
+                <div class="glass-card">
+                    <h3>Election Status</h3>
+                    <p class="status-text">Active</p>
+                    <p>Time Remaining: <span id="countdown">2d 14h 32m</span></p>
+                </div>
+                <div class="glass-card">
+                    <h3>Your Voting Status</h3>
+                    <p id="votingStatus">Not Voted</p>
+                    <button class="btn-primary" onclick="showPage('candidates')">Vote Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Candidates Page -->
+    <section id="candidates" class="page">
+        <div class="container">
+            <h1 class="page-title">Candidates</h1>
+            <div class="candidates-grid" id="candidatesList"></div>
+        </div>
+    </section>
+
+    <!-- Results Page -->
+    <section id="results" class="page">
+        <div class="container">
+            <h1 class="page-title">Election Results</h1>
+            <div class="winner-card" id="winnerCard"></div>
+            <div class="results-grid" id="resultsList"></div>
+        </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section id="admin" class="page">
+        <div class="container">
+            <h1 class="page-title">Admin Panel</h1>
+            <div class="admin-grid">
+                <div class="glass-card">
+                    <h3>Add Candidate</h3>
+                    <input type="text" id="candidateName" placeholder="Candidate Name" class="input">
+                    <input type="text" id="candidateParty" placeholder="Party" class="input">
+                    <button class="btn-primary" onclick="addCandidate()">Add Candidate</button>
+                </div>
+                <div class="glass-card">
+                    <h3>Election Controls</h3>
+                    <button class="btn-primary" onclick="startElection()">Start Election</button>
+                    <button class="btn-secondary" onclick="endElection()">End Election</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
