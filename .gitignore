@@ -1,8 +1,5 @@
 *.class
 *.jar
-backend/*.class
-backend/Blockchain$Block.class
-backend/VotingServer$Candidate.class
-backend/UserAuth$User.class
 .DS_Store
 node_modules/
+.vscode/
