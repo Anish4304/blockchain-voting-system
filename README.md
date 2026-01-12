@@ -70,7 +70,7 @@ blockchain-voting-system/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/blockchain-voting-system.git
+git clone https://github.com/Anish4304/blockchain-voting-system.git
 cd blockchain-voting-system
 ```
 
@@ -207,9 +207,9 @@ This project is licensed under the MIT License.
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Anish4304 - GitHub: https://github.com/Anish4304
 
-Project Link: https://github.com/YOUR_USERNAME/blockchain-voting-system
+Project Link: https://github.com/Anish4304/blockchain-voting-system
 
 ---
 
